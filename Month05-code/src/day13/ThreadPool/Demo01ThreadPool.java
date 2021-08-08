@@ -30,7 +30,11 @@ import java.util.concurrent.Executors;
  */
 public class Demo01ThreadPool {
     public static void main(String[] args) {
+<<<<<<< HEAD
         ExecutorService executorService = Executors.newFixedThreadPool(2);
+=======
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+>>>>>>> origin/master
         //pool-1-thread-1创建了一个新的线程,线程池会一直开启，使用完了线程，会自动把线程归还给线程池，线程可以继续使用
         executorService.submit(new RunnableImpl());
         //pool-1-thread-2创建了一个新的线程
