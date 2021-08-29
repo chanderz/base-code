@@ -5,6 +5,7 @@ import java.io.File;
 /**
  * *
  * * @Description：java.io.File 类是文件和目录路径名的抽象表示，主要用于文件和目录的创建、查找和删除等操作
+ *  file类与操作系统无关，任何操作系统都可以使用这个类中的方法 file,directory,path
  * * 构造方法：
  * * public File(String pathname)  ：通过将给定的**路径名字符串**转换为抽象路径名来创建新的 File实例
  * * public File(String parent, String child)  ：从**父路径名字符串和子路径名字符串**创建新的 File实例
