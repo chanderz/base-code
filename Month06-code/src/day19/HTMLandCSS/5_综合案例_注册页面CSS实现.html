@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background:  url("../../day18/img/register_bg.png") no-repeat center;
+        }
+        .rg_layout{
+            border: #EEEEEE solid 10px;
+            width: 900px;
+            height: 500px;
+            /*让div水平居中*/
+            margin: auto;
+            margin-top: 15px;
+            background-color: white;
+        }
+        .rg_left{
+            border: 1px red solid;
+            font-size: 20px;
+            color: #64DFFF;
+            margin-top: 20px;
+            margin-left: 20px;
+            float: left;
+        }
+
+        .rg_center{
+            border: 1px red solid;
+            margin-top: 20px;
+            margin-left: 20px;
+            float: left;
+        }
+        .rg_right{
+            border: 1px red solid;
+            float: right;
+            font-size: 10px;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="rg_layout">
+    <div class="rg_left">
+        <p>新用户注册</p>
+        <p style="color: grey">USER REGISTER</p>
+    </div>
+    <div class="rg_center">
+        <div class="rg_form">
+            <form>
+                <table>
+                    <tr>
+                        <td>用户名</td>
+                        <td><input type="text" placeholder="请输入账号"></td>
+                    </tr>
+                    <tr>
+                        <td>密码</td>
+                        <td><input type="password" placeholder="请输入密码"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="Email" placeholder="请输入Email"></td>
+                    </tr>
+                    <tr>
+                        <td>姓名</td>
+                        <td><input type="text" placeholder="请输入真实姓名"></td>
+                    </tr>
+                    <tr>
+                        <td>手机号</td>
+                        <td><input type="text" placeholder="请输入您的手机号"></td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>
+                            <input type="radio" value="male">男
+                            <input type="radio" value="female">女</td>
+                    </tr>
+                    <tr>
+                        <td>出生日期</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <input type="text">
+                        <img src="../../day18/img/verify_code.jpg">
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="rg_right">
+        <p>
+            已有账号？<a href="#" style="color: coral">立即登录</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>
