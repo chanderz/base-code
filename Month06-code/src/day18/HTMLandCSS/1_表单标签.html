@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+    <!--
+    表单：
+        概念：用于采集用户输入的数据，用于和服务器进行交互
+        form：用于定义表单，可以定义一个范围，范围代表采集用户数据的范围
+            * 属性：
+                * action：指定提交数据的URL
+                * method：指定提交方式，一共7种，get post比较常用
+                    get：
+                        1.请求参数在地址栏显示，会封装在请求行中（详情见HTTP协议）
+                        2.请求参数长度有限制
+                        3.不太安全
+                    post：
+                        1.请求参数不会在地址栏显示，会封装在请求体中（详情见HTTP协议）
+                        2.请求参数长度没有限制
+                        3.较为安全
+            * 表单项要想被提交，必须指定name属性
+    表单项标签：
+        * input：可以通过type属性值，改变元素展示的样式
+            * type属性：
+                * text：文本输入框，默认值
+                    * placeholder：指定输入框的提示信息，当输入框的内容发生变化会自动清空提示信息
+                * password：密码输入框
+                * radio：单选框
+                    * 注意
+                        1.要想让多个单选框实现单选的效果，则多个单选框的name属性值必须一样
+                        2.一般会给每一个单选框提供value属性，指定其被提交的值
+                        3.checked属性来指定默认值
+                * checkbox：复选框，同radio
+                * file：文件选择框
+                * hidden：隐藏域，用于提交一些信息
+                * 按钮：
+                    * submit：提交按钮。可以提交表单
+                    * button：普通按钮
+                    * image：图片提交按钮
+                        * src属性指定图片路径
+            * label：指定输入项文字描述信息
+                * 注意：
+                    * label的for属性一般会和input的id属性值对应；如果对应了，则点击label区域会自动定位到input输入框获取焦点
+        * select：下拉列表
+            * 属性：option指定列表项
+        * textarea：文本域
+            * 属性：
+                * cols指定列数，每行多少字符
+                * rows默认行数
+    -->
+<form action="#" method="get">
+    <label for="username">用户名：</label><input type="text" name="username" placeholder="请输入用户名" id="username"><br>
+    密码：<input type="password" name="password" placeholder="请输入密码"><br>
+    性别：<input type="radio" name="gender" value="male" checked>male
+        <input type="radio" name="gender" value="female">female
+        <br>
+    爱好：<input type="checkbox" name="hobby" value="coding" checked="checked">coding
+        <input type="checkbox" name="hobby" value="gaming">gaming
+        <input type="checkbox" name="hobby" value="shopping">shopping
+        <br>
+    图片：<input type="file" name="file"><br>
+    隐藏域：<input type="hidden" name="id" value="aaa">
+     <br>
+    <label for="color">取色器：</label><input type="color" id="color" name="color">
+    <br>
+    生日：<input type="date" name="birthday"><br>
+    生日：<input type="datetime-local" name="birthday"><br>
+    邮箱：<input type="email" name="e-mail"><br>
+    年龄：<input type="number" name="age"><br>
+    search：<input type="search" name="search"><br>
+
+    <input type="submit" value="登录"><br>
+    <input type="button" value="button"><br>
+    <input type="image" src="../img/regbtn.jpg" ><br>
+    <hr>
+    省份：
+    <select name="province">
+        <option value="">---请选择---</option>
+        <option value="1">北京</option>
+        <option value="2">上海</option>
+        <option value="3">杭州</option>
+    </select><br>
+    description:
+    <textarea cols="50" rows="5" name="description"></textarea>
+</form>
+
+</body>
+</html>
