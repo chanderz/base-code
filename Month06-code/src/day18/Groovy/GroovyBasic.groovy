@@ -18,6 +18,17 @@ class GroovyBasic {
         println(slurper.data);
         println(slurper.size());
         println(slurper.data.size())
+        println(String.format("\$%.2f",2.234))
+        def test = { parameterTypes ->
+            if(parameterTypes == true){
+                return slurper.data
+            }else {
+                return slurper.data.size()
+            }}
+        assert slurper.data.size() == test(false)
+        if(!null){
+            print('a')
+        }
 
 
     }
